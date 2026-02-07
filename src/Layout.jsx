@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
@@ -85,6 +84,12 @@ export default function Layout({ children, currentPageName }) {
       title: "SQL ובדיקות מסדי נתונים",
       url: createPageUrl("SQLMeetings"),
       icon: Database,
+      isExternal: false,
+    },
+    {
+      title: "Playwright לבודק הידני",
+      url: createPageUrl("PlaywrightForManualTesters"),
+      icon: TestTube2,
       isExternal: false,
     },
     {
