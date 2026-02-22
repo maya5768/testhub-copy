@@ -16,6 +16,7 @@ import {
   Crown,
   UserCheck,
   Edit, // Added Edit icon for content management
+  ClipboardList,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { User } from "@/entities/User";
@@ -48,6 +49,12 @@ export default function Layout({ children, currentPageName }) {
       title: "הצטרפות לקהילה",
       url: createPageUrl("Join"),
       icon: Users,
+      isExternal: false,
+    },
+    {
+      title: "שאלון כניסה לקהילה",
+      url: createPageUrl("Assessment"),
+      icon: ClipboardList,
       isExternal: false,
     },
     {

@@ -10,7 +10,8 @@ import {
   TestTube2,
   Code,
   GitBranch,
-  Award
+  Award,
+  ClipboardList
 } from "lucide-react";
 
 export default function HomePage() {
@@ -41,6 +42,15 @@ export default function HomePage() {
       color: "from-purple-500 to-purple-600",
       bgColor: "bg-purple-50",
       textColor: "text-purple-700"
+    },
+    {
+      title: "שאלון כניסה לקהילה",
+      description: "ענה על שאלון הערכת הידע כדי להצטרף לקהילת הבדיקות",
+      icon: ClipboardList,
+      url: createPageUrl("Assessment"),
+      color: "from-orange-500 to-amber-600",
+      bgColor: "bg-orange-50",
+      textColor: "text-orange-700"
     }
   ];
 
@@ -85,7 +95,7 @@ export default function HomePage() {
         </div>
 
         {/* Quick Actions */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {quickActions.map((action, index) => (
             <Card key={index} className="group bg-white/70 backdrop-blur-sm border-white/20 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 overflow-hidden">
               <div className={`h-2 bg-gradient-to-r ${action.color}`}></div>
